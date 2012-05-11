@@ -1,4 +1,4 @@
-package $package$
+package $organization$
 
 import akka.actor._
 import akka.pattern.ask
@@ -17,8 +17,8 @@ class Counter extends Actor {
   }
 }
 
-object ExampleApp extends App {
-  val system = ActorSystem("example")
+object $name;format="Camel"$ extends App {
+  val system = ActorSystem("$name;format="Camel"$")
 
   val counter = system.actorOf(Props[Counter])
 
