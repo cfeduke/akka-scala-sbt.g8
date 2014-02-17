@@ -1,10 +1,8 @@
-Akka, Scala, sbt template
-=========================
+# Akka, Scala, sbt template
 
-A [giter8] template for [Akka] 2.0 projects using [Scala] and [sbt].
+Because Typesafe Activator is a [poor replacement](https://github.com/typesafehub/akka-scala-sbt.g8/pull/7#issuecomment-32006874) for [giter8].
 
-License
--------
+# License
 
 Copyright 2012 Typesafe, Inc.
 
@@ -18,6 +16,12 @@ Unless required by applicable law or agreed to in writing, software distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied. See the License for the
 specific language governing permissions and limitations under the License.
+
+## My Modifications
+
+I modified files. Really? Apache 2.0 license burden? Sheesh.
+
+Copyright 2014 Charles Feduke
 
 [giter8]: https://github.com/n8han/giter8
 [Akka]: http://akka.io
