@@ -1,1 +1,9 @@
+*.un~
+*~
+.netrwhist
+Session.vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
 target/
+.idea/
+.idea_modules
