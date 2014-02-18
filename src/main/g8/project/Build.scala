@@ -7,11 +7,12 @@ object Build extends sbt.Build {
     id = "$name;format="norm"$",
     base = file("."),
     settings = Project.defaultSettings ++ Seq(
-      name := "$name$",
-      organization := "$organization$",
-      version := "$version$",
-      scalaVersion := "$scala_version$",
-      libraryDependencies ++= Dependencies()
+      name                  := "$name$",
+      organization          := "$organization$",
+      version               := "$version$",
+      scalaVersion          := "$scala_version$",
+      scalacOptions         := Seq("-deprecation", "-feature", "-encoding", "utf8"),
+      libraryDependencies   ++= Dependencies()
     )
   )
 
