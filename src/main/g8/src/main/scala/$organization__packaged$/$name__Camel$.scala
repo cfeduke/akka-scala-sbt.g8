@@ -29,8 +29,8 @@ class RunLoop extends Actor {
   val counter = context.actorOf(Props(classOf[Counter]))
   val reporter = context.actorOf(Props(classOf[Reporter], (msg: Any) => println(msg)))
 
-  context.system.scheduler.schedule(1 second, 1 second, counter, Tick)
-  context.system.scheduler.schedule(3 seconds, 3 seconds, counter, Get)(context.dispatcher, reporter)
+  context.system.scheduler.schedule(1.second, 1.second, counter, Tick)
+  context.system.scheduler.schedule(3.seconds, 3.seconds, counter, Get)(context.dispatcher, reporter)
 
   def receive = {
     case _ =>
