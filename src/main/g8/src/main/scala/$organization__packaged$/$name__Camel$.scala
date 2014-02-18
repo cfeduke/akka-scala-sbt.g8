@@ -19,7 +19,7 @@ class Counter extends Actor {
 class Reporter(val printer: Any => Unit) extends Actor {
   def receive = {
     case (count) =>
-      printer(s"Count:\t\t$count")
+      printer("Count:\t\t{}".format(count))
   }
 }
 

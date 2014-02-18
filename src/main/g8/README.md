@@ -8,13 +8,9 @@ Start an sbt session and execute `run`.
 
 Alternatively:
 
-```bash
-$ sbt run
-```
+    sbt run
 
 or:
 
-```bash
-$ sbt test
-```
+    sbt test
 

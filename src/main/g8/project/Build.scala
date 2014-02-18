@@ -10,7 +10,7 @@ object Build extends sbt.Build {
       name := "$name$",
       organization := "$organization$",
       version := "$version$",
-      scalaVersion := "$scala_version",
+      scalaVersion := "$scala_version$",
       libraryDependencies ++= Dependencies()
     )
   )
