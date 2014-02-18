@@ -1,5 +1,20 @@
-A sample for the Typesafe Stack (http://typesafe.com/stack).
+# $name$
 
-Akka 2.0 sample project using Scala and SBT.
+Project description.
 
-To run and test it use SBT invoke: 'sbt run'
+## Running
+
+Start an sbt session and execute `run`. 
+
+Alternatively:
+
+```bash
+$ sbt run
+```
+
+or:
+
+```bash
+$ sbt test
+```
+
