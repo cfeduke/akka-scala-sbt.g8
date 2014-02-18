@@ -2,7 +2,6 @@ package $organization$
 
 import akka.actor._
 import scala.concurrent.duration._
-import akka.pattern.ask
 
 case object Tick
 case object Get
