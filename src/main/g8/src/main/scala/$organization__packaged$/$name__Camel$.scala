@@ -1,9 +1,8 @@
 package $organization$
 
 import akka.actor._
+import scala.concurrent.duration._
 import akka.pattern.ask
-import akka.util.duration._
-import akka.util.Timeout
 
 case object Tick
 case object Get
@@ -17,20 +16,29 @@ class Counter extends Actor {
   }
 }
 
-object $name;format="Camel"$ extends App {
-  val system = ActorSystem("$name;format="Camel"$")
-
-  val counter = system.actorOf(Props[Counter])
-
-  counter ! Tick
-  counter ! Tick
-  counter ! Tick
-
-  implicit val timeout = Timeout(5 seconds)
-
-  (counter ? Get) onSuccess {
-    case count => println("Count is " + count)
+class Reporter(val printer: Any => Unit) extends Actor {
+  def receive = {
+    case (count) =>
+      printer(s"Count:\t\t$count")
   }
+}
 
-  system.shutdown()
+class RunLoop extends Actor {
+  import context.dispatcher
+
+  val counter = context.actorOf(Props(classOf[Counter]))
+  val reporter = context.actorOf(Props(classOf[Reporter], println))
+
+  context.system.scheduler.schedule(1 second, 1 second, counter, Tick)
+  context.system.scheduler.schedule(3 seconds, 3 seconds, counter, Get)(context.dispatcher, reporter)
+
+  case receive = {
+    case _ =>
+  }
+}
+
+object $name;format="Camel"$ extends App {
+
+  akka.Main.main(Array("$organization$.RunLoop"))
+
 }
