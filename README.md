@@ -2,6 +2,14 @@
 
 Because Typesafe Activator is a [poor replacement](https://github.com/typesafehub/akka-scala-sbt.g8/pull/7#issuecomment-32006874) for [giter8].
 
+- [Scala] 2.10.3
+- [Akka] 2.2.3 (`akka-actor` and `akka-testkit`)
+- [sbt] 0.13.0
+
+As I bump versions check the branches for previous versions of the packages referenced by this template.
+
+Includes a sample `akka.Main` implementation so you can muck around with Actors immediately.
+
 # License
 
 Copyright 2012 Typesafe, Inc.
